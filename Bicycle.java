@@ -12,7 +12,7 @@ public class Bicycle implements CarbonFootprint{
         return footprint_per_km_average;
     }
 
-    public double setDistances(distances){
+    public double setDistances(double distances){
         this.distances = distances;
     }
 

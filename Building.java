@@ -2,7 +2,7 @@ package HW2;
 
 public class Building implements CarbonFootprint{
 
-    private static double footprint_eletricity_per_unit = 0.00059;
+    private static double footprint_electricity_per_unit = 0.00059;
     private static double footprint_natural_gas_per_unit = 0.00018;
     private static double footprint_heating_oil_per_unit = 0.00026;
     private static double footprint_coal_per_unit = 0.00034;
@@ -10,7 +10,7 @@ public class Building implements CarbonFootprint{
     private static double footprint_propane_per_unit = 0.00579;
     private static double footprint_wood_pellets_per_unit = 0.00774;
 
-    private double eletricity;
+    private double electricity;
     private double natural_gas;
     private double heating_oil;
     private double coal;
@@ -19,8 +19,8 @@ public class Building implements CarbonFootprint{
     private double wood_pellets;
     private int num_of_people;
 
-    public double getEletricity(){
-        return eletricity;
+    public double getElectricity(){
+        return electricity;
     }
     public double getNatural_gas(){
         return natural_gas;
@@ -44,36 +44,36 @@ public class Building implements CarbonFootprint{
         return num_of_people;
     }
 
-    public double setEletricity(eletricity){
-        this.eletricity = eletricity;
+    public double setElectricity(double electricity){
+        this.eletricity = electricity;
     }
-    public double setNatural_gas(natural_gas){
+    public double setNatural_gas(double natural_gas){
         this.natural_gas = natural_gas;
     }
-    public double setHeating_oil(heating_oil){
+    public double setHeating_oil(double heating_oil){
         this.heating_oil = heating_oil;
     }
-    public double setCoal(coal){
+    public double setCoal(double coal){
         this.coal = coal;
     }
-    public double setLPG(LPG){
+    public double setLPG(double LPG){
         this.LPG = LPG;
     }
-    public double setPropane(propane){
+    public double setPropane(double propane){
         this.propane = propane;
     }
-    public double setWood_pellets(wood_pellets){
+    public double setWood_pellets(double wood_pellets){
         this.wood_pellets = wood_pellets;
     }
-    public int setNum_of_people(num_of_people){
+    public int setNum_of_people(double num_of_people){
         this.num_of_people = num_of_people;
     }
 
-    public Building(int num_of_people, double eletricity, double natural_gas, 
+    public Building(int num_of_people, double electricity, double natural_gas, 
                     double heating_oil, double coal, double LPG, double propane,
                     double wood_pellets){
         setNum_of_people(num_of_people);
-        setEletricity(eletricity);
+        setElectricity(electricity);
         setNatural_gas(natural_gas);
         setHeating_oil(heating_oil);
         setCoal(coal);
@@ -87,7 +87,7 @@ public class Building implements CarbonFootprint{
         // TODO Auto-generated method stub
         double footprint = 0;
 
-        footprint += getEletricity() * footprint_eletricity_per_unit;
+        footprint += getElectricity() * footprint_electricity_per_unit;
         footprint += getNatural_gas() * footprint_natural_gas_per_unit;
         footprint += getHeating_oil() * footprint_heating_oil_per_unit;
         footprint += getCoal() * footprint_coal_per_unit;
