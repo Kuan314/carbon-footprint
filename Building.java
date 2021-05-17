@@ -44,28 +44,28 @@ public class Building implements CarbonFootprint{
         return num_of_people;
     }
 
-    public double setElectricity(double electricity){
-        this.eletricity = electricity;
+    public void setElectricity(double electricity){
+        this.electricity = electricity;
     }
-    public double setNatural_gas(double natural_gas){
+    public void setNatural_gas(double natural_gas){
         this.natural_gas = natural_gas;
     }
-    public double setHeating_oil(double heating_oil){
+    public void setHeating_oil(double heating_oil){
         this.heating_oil = heating_oil;
     }
-    public double setCoal(double coal){
+    public void setCoal(double coal){
         this.coal = coal;
     }
-    public double setLPG(double LPG){
+    public void setLPG(double LPG){
         this.LPG = LPG;
     }
-    public double setPropane(double propane){
+    public void setPropane(double propane){
         this.propane = propane;
     }
-    public double setWood_pellets(double wood_pellets){
+    public void setWood_pellets(double wood_pellets){
         this.wood_pellets = wood_pellets;
     }
-    public int setNum_of_people(double num_of_people){
+    public void setNum_of_people(int num_of_people){
         this.num_of_people = num_of_people;
     }
 
@@ -94,6 +94,10 @@ public class Building implements CarbonFootprint{
         footprint += getLPG() * footprint_LPG_per_unit;
         footprint += getPropane() * footprint_propane_per_unit;
         footprint += getWood_pellets() * footprint_wood_pellets_per_unit;
+        
+        if(getNum_of_people() != 0){
+            footprint /= getNum_of_people();
+        }
         
         return footprint;
     }

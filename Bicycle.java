@@ -3,7 +3,7 @@ package HW2;
 public class Bicycle implements CarbonFootprint{
 
     private double distances;
-    private static double footprint_per_km_average = 31.07;
+    private static double footprint_per_km_average = 80.467;
 
     public double getDistances(){
         return distances;
@@ -12,7 +12,7 @@ public class Bicycle implements CarbonFootprint{
         return footprint_per_km_average;
     }
 
-    public double setDistances(double distances){
+    public void setDistances(double distances){
         this.distances = distances;
     }
 
